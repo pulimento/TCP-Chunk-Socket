@@ -22,7 +22,7 @@ while 1:
 		if len(data) > 0:
 			if data=="#":
 				conn.close()
-				f = open("output", "wb")
+				f = open(filename, "wb")
 				f.write(filedata)
 				f.close()
 				print("Transmission complete!")

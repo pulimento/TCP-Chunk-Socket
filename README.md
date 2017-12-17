@@ -1,9 +1,7 @@
 # TCP-Chunk-Socket
 --- Python Module for transmitting large Files via TCP sockets---
 
-Normally, Python sockets can only send and receive a limited amount of Data. When trying to send large files via a TCP socket, you will run into an error.
-
-The module in this repository allows you to easily send large files via TCP.
+Normally, Python sockets can only send and receive a limited amount of Data. With this simple Python module you can send very large files over a network with only a few lines of code.
 
 Client example code:
 ~~~
@@ -18,3 +16,5 @@ import csockets as csk
 
 print(csk.recv_csocket("127.0.0.1",8080,1024))
 ~~~
+
+Obviously you have to replace the IP-Address ("127.0.0.1"), Port (8080), Chunksize (1024) and Data ("Hello World").

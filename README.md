@@ -1,7 +1,20 @@
 # TCP-Chunk-Socket
---- Server and Client Socket Scripts for transmitting large Files ---
+--- Python Module for transmitting large Files via TCP sockets---
 
-Normally, Python Sockets can only send and receive a limited amount of Data. When trying to send large files via a Python Socket, you might run into Errors.
+Normally, Python sockets can only send and receive a limited amount of Data. When trying to send large files via a TCP socket, you will run into an error.
 
-A possible solution to this Problem is to split the Data into Chunks and send them successively.
-The Implementation is very simple and not intended for Production Use. The Code has instead been created for educational Purpose.
+The module in this repository allows you to easily send large files via TCP.
+
+Client example code:
+~~~
+import csockets as csk
+
+csk.send_csocket("127.0.0.1",8080,1024,"Hello World")
+~~~
+
+Server example code:
+~~~
+import csockets as csk
+
+print(csk.recv_csocket("127.0.0.1",8080,1024))
+~~~
